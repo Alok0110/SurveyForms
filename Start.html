@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        
+        <meta charset="utf-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+        <!--These are Third Party vendor css files, Get Grid and Normalize -->
+        <link type="text/css" rel="stylesheet" href="css/normalize.css" >
+        <link type="text/css" rel="stylesheet" href="css/grid.css" >
+        <!-- Custom css files -->
+        <link type="text/css" rel="stylesheet" href="css/customcss.css" >
+        
+    </head>
+    
+    <body>
+    
+        <header class="row container-for-head">
+            
+            <nav class="col span-2-of-2">
+                
+                <h2> Survey Form And Template Generator </h2>
+            
+            </nav>
+        
+        </header>
+        
+        <section class="row container-box-o" >
+        
+            <div class="col span-2-of-2" >
+                
+                <div class="row container-box-i" >
+                    <!-- Element Box -->
+                    <div class="col span-1-of-4 element-col" >
+                    
+                        <div id="heading-id" class="heading-cl" >
+                            
+                            <input class="heading-input" type="text" placeholder="Heading" maxlength="50" >
+                            <p>Drag</p>
+                            <input type="button" id="delete-heading-id"  value="Delete" >
+                            
+                         </div>
+                        
+                        <br>
+                        
+                        <div id="question-id" class="question-cl" >
+                            
+                            <input class="question-input" type="text" placeholder="Survey Question" maxlength="50" >
+                            <p>Drag</p>
+                            <input type="button" id="delete-survey-id"  value="Delete" >
+                            
+                        </div>
+                        
+                        <br>
+                        
+                        <div id="image-id" class="image-cl" >
+                            
+                            <img height="221px" width="308px" id="" src="image/author1.png" >
+                            <input class="image-input" type="text" placeholder="Image Path" maxlength="50" >
+                            <p>Drag</p>
+                            <span>Width (px):</span><input type="text"  class="x-px" value="" >
+                            <span>Height (px):</span><input type="text" class="y-px" value="" >
+                            <input type="button" id="delete-image-id"  value="Delete" >
+                            
+                        </div>
+                        
+                        <br>
+                        
+                        <div id="radio-id" class="radio-cl" >
+                        
+                            <input type="radio"  value=""> <br>
+                            <input class="radio-input" type="text" placeholder="Radio Options" maxlength="50" >
+                            <p>Drag</p>
+                            <input type="button" id="delete-radio-id"  value="Delete" >
+                            
+                        </div>
+                        
+                        <br>
+                        
+                        <div id="dropdown-id" class="dropdown-cl" >
+                            
+                            <select>
+                                <option id='0' >Select</option>
+                            </select><br>
+                            <p>Drag</p>
+                            <input type="button" id="addopt-dropdown-id"  value="Add Options" >
+                            <input type="button" id="delete-dropdown-id"  value="Delete" >
+                            
+                        </div>
+                        
+                        <br>
+                        
+                        
+                        <div id="txt-area-id" class="txt-area-cl" >
+                            
+                            <textarea rows="4" cols="50" placeholder="Text Area" ></textarea>
+                            <p>Drag</p>
+                            <input type="button" id="delete-textarea-id"  value="Delete" >
+                            
+                        </div>
+                        
+                        <br>
+                        
+                        <div id="check-box-id" class="check-box-cl" >
+                            
+                            <input type="checkbox"  value=""> <br>
+                            <input class="radio-input" type="text" placeholder="Check Box Options" maxlength="50" >
+                            <p>Drag</p>
+                            <input type="button" id="delete-check-id"  value="Delete" >
+                            
+                        </div>
+                        
+                        <br>
+                        
+                        <div id="upload-id" class="upload-cl" >
+                            
+                            <input type="file" id="" >
+                            <p>Drag</p>
+                            <input type="button" id="delete-uploadfile-id"  value="Delete" >
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Form Holder -->
+                    <div class="col span-3-of-4 holder-col" >
+                    
+                        <ul id="sor">
+                            
+                            
+                        </ul>
+                        
+                        <ul class="lastUl">
+                            
+                            <li><div><input type="button" id="cTemp" value="Create Template" ></div></li>
+                            
+                            <li><div><input type="button" id="cForm" value="Create Form" ></div></li>
+                            
+                            <li><div><input type="button" id="cQuest" value="Save Question" ></div></li>
+                        
+                        </ul>
+                        
+                    </div>
+                </div>
+            
+            </div>
+            
+        </section>
+        
+        <!--<footer class="row container-for-footer" >
+        
+        
+        </footer>-->
+    
+        <!-- Jquery and Custom Javascript Files -->
+        <script type="text/javascript" src="jquery/jquery-3.1.0.min.js" ></script>
+        <script type="text/javascript" src="script/jquery-ui.min.js" ></script>
+        <script type="text/javascript" src="script/customscript.js" ></script>
+        
+    </body>
+    
+</html>
+
