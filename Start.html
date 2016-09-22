@@ -37,7 +37,7 @@
                         <div id="heading-id" class="heading-cl" >
                             
                             <input class="heading-input" type="text" placeholder="Heading" maxlength="50" >
-                            <p>Drag</p>
+                            <p class="drag">Drag</p>
                             <input type="button" id="delete-heading-id"  value="Delete" >
                             
                          </div>
@@ -47,8 +47,8 @@
                         <div id="question-id" class="question-cl" >
                             
                             <input class="question-input" type="text" placeholder="Survey Question" maxlength="50" >
-                            <p>Drag</p>
-                            <input type="button" id="delete-survey-id"  value="Delete" >
+                            <p class="drag">Drag</p>
+                            <input type="button" onclick="com_surveyForms_predefined_del( this , 'Q' )" id="delete-survey-id"  value="Delete" >
                             
                         </div>
                         
@@ -58,10 +58,10 @@
                             
                             <img height="221px" width="308px" id="" src="image/author1.png" >
                             <input class="image-input" type="text" placeholder="Image Path" maxlength="50" >
-                            <p>Drag</p>
+                            <p class="drag" >Drag</p>
                             <span>Width (px):</span><input type="text"  class="x-px" value="" >
                             <span>Height (px):</span><input type="text" class="y-px" value="" >
-                            <input type="button" id="delete-image-id"  value="Delete" >
+                            <input type="button" onclick="com_surveyForms_predefined_del( this , 'I' )" id="delete-image-id"  value="Delete" >
                             
                         </div>
                         
@@ -71,7 +71,7 @@
                         
                             <input type="radio"  value=""> <br>
                             <input class="radio-input" type="text" placeholder="Radio Options" maxlength="50" >
-                            <p>Drag</p>
+                            <p class="drag" >Drag</p>
                             <input type="button" id="delete-radio-id"  value="Delete" >
                             
                         </div>
@@ -83,7 +83,7 @@
                             <select>
                                 <option id='0' >Select</option>
                             </select><br>
-                            <p>Drag</p>
+                            <p class="drag" >Drag</p>
                             <input type="button" id="addopt-dropdown-id"  value="Add Options" >
                             <input type="button" id="delete-dropdown-id"  value="Delete" >
                             
@@ -95,7 +95,7 @@
                         <div id="txt-area-id" class="txt-area-cl" >
                             
                             <textarea rows="4" cols="50" placeholder="Text Area" ></textarea>
-                            <p>Drag</p>
+                            <p class="drag" >Drag</p>
                             <input type="button" id="delete-textarea-id"  value="Delete" >
                             
                         </div>
@@ -106,7 +106,7 @@
                             
                             <input type="checkbox"  value=""> <br>
                             <input class="radio-input" type="text" placeholder="Check Box Options" maxlength="50" >
-                            <p>Drag</p>
+                            <p class="drag" >Drag</p>
                             <input type="button" id="delete-check-id"  value="Delete" >
                             
                         </div>
@@ -116,7 +116,7 @@
                         <div id="upload-id" class="upload-cl" >
                             
                             <input type="file" id="" >
-                            <p>Drag</p>
+                            <p class="drag">Drag</p>
                             <input type="button" id="delete-uploadfile-id"  value="Delete" >
                             
                         </div>
@@ -126,7 +126,7 @@
                     <!-- Form Holder -->
                     <div class="col span-3-of-4 holder-col" >
                     
-                        <ul id="sor">
+                        <ul id="sor" class="sor" >
                             
                             
                         </ul>
