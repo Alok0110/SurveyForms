@@ -13,7 +13,7 @@ You can download the latest version of [AutoSurveyForms.js on GitHub](https://gi
 
 You can find documentation at [AutoSurveyForms.js on GitHub](https://github.com/Alok0110/SurveyForms).
 
-PHP parser @ version 2.0
+PHP parser @ Beta version 2.0 - AutoSurveyForms.js
 
 
 ## API Methods For PHP Parser, Used For Calculating Survey Results
