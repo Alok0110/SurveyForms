@@ -16,7 +16,7 @@ You can find documentation at [AutoSurveyForms.js on GitHub](https://github.com/
 PHP parser @ version 2.0
 
 
-## API Methods For PHP Parser
+## API Methods For PHP Parser, Used For Calculating Survey Results
 
 g.surveryForm_optionsAccessIds.getAllImageIds (  )
 
