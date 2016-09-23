@@ -111,8 +111,15 @@ header nav h2 {
 /********************************/
 
 .container-for-footer {
-    height: 100px;
+    height: 200px;
     background-color: #50b6f5;
+}
+
+.copyRT p {
+    display: inline-block;
+    width: 80%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 /*******************************/
