@@ -1,0 +1,272 @@
+
+/* Set height of container's */
+.container-box-o {
+    /*height: 2000px;*/
+    height: auto; 
+}
+
+.container-box-i {
+    /*height: 1999px;*/
+    height: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/******************************/
+/* heading */
+/******************************/
+.heading-cl {
+    width: auto;
+    background: #dedede;
+}
+
+.heading-cl p {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #908d8d;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.heading-input {
+    margin: 20px 2px 20px 2px;
+}
+
+#delete-heading-id {
+    display: none;
+}
+
+/*******************************/
+/* Image */
+/*******************************/
+
+.image-cl {
+    width: auto;
+    background: #dedede;
+    padding: 2px;
+}
+
+.image-cl p {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #908d8d;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+#delete-image-id {
+    display: none;
+}
+
+.x-px {
+    display: none;
+    width: 30px !important;
+}
+
+.y-px {
+    display: none;
+    width: 30px !important;
+}
+
+/*******************************/
+/* Textarea Options */
+/*******************************/
+
+.txt-area-cl {
+    width: auto;
+    background: #dedede;
+    padding: 2px;
+}
+
+.txt-area-cl p {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #908d8d;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+#delete-textarea-id {
+    display: none;
+}
+
+/*******************************/
+/* Head Navigation Section */
+/*******************************/
+
+.container-for-head {
+    height: 100px;
+    background-color: #50b6f5;
+    
+}
+
+header nav h2 {
+    display: inline-block;
+    margin-left: 20px;
+    color: #777777;
+}
+
+/********************************/
+/* Footer */
+/********************************/
+
+.container-for-footer {
+    height: 100px;
+    background-color: #50b6f5;
+}
+
+/*******************************/
+/* Check box */
+/*******************************/
+
+.check-box-cl{
+    width: 35%;
+    background: #dedede;
+    padding: 2px;
+}
+
+.check-box-cl p {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #908d8d;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+#delete-check-id {
+    display: none;
+}
+
+/*******************************/
+/* UL */
+/*******************************/
+
+ul {
+    list-style: none;
+}
+
+.lastUl li {
+    float:right;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
+/*******************************/
+/* Upload File */
+/*******************************/
+
+.upload-cl {
+    width: auto;
+    background: #dedede;
+    padding: 2px;
+}
+
+.upload-cl p {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #908d8d;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+#delete-uploadfile-id {
+    display: none;
+}
+
+/*******************************/
+/* Radio Options */
+/*******************************/
+.radio-cl {
+    width: 35%;
+    background: #dedede;
+    padding: 2px;
+    
+}
+
+.radio-cl p {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #908d8d;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+#delete-radio-id {
+    display: none;
+}
+
+/*******************************/
+/* Dropdown Options */
+/*******************************/
+.dropdown-cl {
+    width: 35%;
+    background: #dedede;
+    padding: 2px;
+}
+
+.dropdown-cl p {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #908d8d;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+#delete-dropdown-id {
+    display: none;
+}
+
+/*******************************/
+/* Survey Question */
+/*******************************/
+
+.question-cl {
+    width: auto;
+    background: #dedede;
+}
+
+.question-cl p {
+    padding: 2px;
+    cursor: pointer;
+    background-color: #908d8d;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.question-input {
+    margin: 20px 2px 20px 2px;
+}
+
+#delete-survey-id {
+    display: none;
+}
+
+/******************************/
+/* body */
+/******************************/
+.element-col {
+    height: auto;
+    /*1999px*/
+}
+
+.holder-col {
+    height: 200px;
+    background-color: antiquewhite;
+}
+
+/******************************/
+/* Input Box */
+/******************************/
+input[type=text],
+input[type=email],
+input[type=password],
+select,
+textarea{
+    
+    width: 92%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    
+}
