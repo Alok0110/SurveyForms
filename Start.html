@@ -72,7 +72,7 @@
                             <input type="radio"  value=""> <br>
                             <input class="radio-input" type="text" placeholder="Radio Options" maxlength="50" >
                             <p class="drag" >Drag</p>
-                            <input type="button" id="delete-radio-id"  value="Delete" >
+                            <input type="button" onclick="com_surveyForms_predefined_del( this , 'Rad' )" id="delete-radio-id"  value="Delete" >
                             
                         </div>
                         
@@ -85,7 +85,7 @@
                             </select><br>
                             <p class="drag" >Drag</p>
                             <input type="button" id="addopt-dropdown-id"  value="Add Options" >
-                            <input type="button" id="delete-dropdown-id"  value="Delete" >
+                            <input type="button" onclick="com_surveyForms_predefined_del( this , 'DD' )" id="delete-dropdown-id"  value="Delete" >
                             
                         </div>
                         
@@ -96,7 +96,7 @@
                             
                             <textarea rows="4" cols="50" placeholder="Text Area" ></textarea>
                             <p class="drag" >Drag</p>
-                            <input type="button" id="delete-textarea-id"  value="Delete" >
+                            <input type="button" onclick="com_surveyForms_predefined_del( this , 'TxtA' )" id="delete-textarea-id"  value="Delete" >
                             
                         </div>
                         
@@ -107,7 +107,7 @@
                             <input type="checkbox"  value=""> <br>
                             <input class="radio-input" type="text" placeholder="Check Box Options" maxlength="50" >
                             <p class="drag" >Drag</p>
-                            <input type="button" id="delete-check-id"  value="Delete" >
+                            <input type="button" onclick="com_surveyForms_predefined_del( this , 'CxBx' )" id="delete-check-id"  value="Delete" >
                             
                         </div>
                         
@@ -117,7 +117,7 @@
                             
                             <input type="file" id="" >
                             <p class="drag">Drag</p>
-                            <input type="button" id="delete-uploadfile-id"  value="Delete" >
+                            <input type="button" onclick="com_surveyForms_predefined_del( this , 'Up' )" id="delete-uploadfile-id"  value="Delete" >
                             
                         </div>
                         
@@ -154,8 +154,8 @@
         </footer>-->
     
         <!-- Jquery and Custom Javascript Files -->
-        <script type="text/javascript" src="jquery/jquery-3.1.0.min.js" ></script>
-        <script type="text/javascript" src="script/jquery-ui.min.js" ></script>
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+        <script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>
         <script type="text/javascript" src="script/AutoSurveyForms.js" ></script>
         
     </body>
