@@ -782,7 +782,7 @@
     }
     
     $('#cTemp').click(function(){
-        alert('Creating Template Please Wait !');
+        alert('Work in progress for this API !');
     });
     
     $('#cForm').click(function(){
