@@ -673,6 +673,19 @@
         
     }
     
+    g.com_surveyForms_predefined_DD = function ( o , typeOf ) {
+        
+        if( typeOf === 'DD' )
+            {
+                //console.log ( "get len --> " +  ( $( o ).parent() ).children( 'select' ).attr( 'id' ).length );
+                if( ( $( o ).parent() ).children( 'select' ).attr( 'id' ).length !== 0 )
+                    {
+                        alert ( 'Version 1.0, Functionality is in Beta Version' );
+                    }
+            }
+        
+    }
+    
     g.com_surveyForms_predefined_del = function ( o , typeOf ) {
         
                     if( typeOf !== 'I' )  ($( o ).parent()).parent().remove();
@@ -773,7 +786,11 @@
     });
     
     $('#cForm').click(function(){
-        alert(' Version 1.0 ');
+        alert(' Version 1.0, Functionality is in Beta Version ');
+    });
+    
+    $('#cReset').click(function(){
+        location.reload();
     });
     
     $('#cQuest').click(function(){
@@ -786,7 +803,16 @@
                           alert( "Please Add Option's To Question Before Saving!" );
                       }
                   else {
-                      g.provideFn.resetTrack();
+                      
+                      var r = confirm("Saving Question Will Not Allow You To Modify Options, Do You Wish To Continue !");
+                            if (r == true) {
+                                                g.provideFn.resetTrack();
+                                } else {
+                                                
+                                        }
+                      
+                         
+                      
                   }
               }
         else {
