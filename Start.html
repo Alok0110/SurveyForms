@@ -9,6 +9,7 @@
         <!--These are Third Party vendor css files, Get Grid and Normalize -->
         <link type="text/css" rel="stylesheet" href="css/normalize.css" >
         <link type="text/css" rel="stylesheet" href="css/grid.css" >
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <!-- Custom css files -->
         <link type="text/css" rel="stylesheet" href="css/customcss.css" >
         
@@ -84,7 +85,7 @@
                                 <option id='0' >Select</option>
                             </select><br>
                             <p class="drag" >Drag</p>
-                            <input type="button" id="addopt-dropdown-id"  value="Add Options" >
+                            <input type="button" onclick="com_surveyForms_predefined_DD( this , 'DD' )" id="addopt-dropdown-id"  value="Add Options" >
                             <input type="button" onclick="com_surveyForms_predefined_del( this , 'DD' )" id="delete-dropdown-id"  value="Delete" >
                             
                         </div>
@@ -138,6 +139,8 @@
                             <li><div><input type="button" id="cForm" value="Create Form" ></div></li>
                             
                             <li><div><input type="button" id="cQuest" value="Save Question" ></div></li>
+                            
+                            <li><div><input type="button" id="cReset" value="Reset" ></div></li>
                         
                         </ul>
                         
@@ -148,10 +151,21 @@
             
         </section>
         
-        <!--<footer class="row container-for-footer" >
+        <footer class="row container-for-footer" >
         
+            <div class="col span-1-of-3">
+                <p></p>
+            </div>
+            
+            <div class="col span-1-of-3 copyRT">
+                <p>&copy; 2016 SURVEY FORMS - Alok Dethe</p>
+            </div>
+            
+            <div class="col span-1-of-3">
+                <p></p>
+            </div>
         
-        </footer>-->
+        </footer>
     
         <!-- Jquery and Custom Javascript Files -->
         <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
