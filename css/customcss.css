@@ -145,6 +145,15 @@ header nav h2 {
 }
 
 /*******************************/
+/* span space */
+/*******************************/
+
+#spHid {
+    height: 20px;
+    display: none;
+}
+
+/*******************************/
 /* UL */
 /*******************************/
 
@@ -258,7 +267,7 @@ ul {
 }
 
 .holder-col {
-    height: 200px;
+    height: auto;
     background-color: antiquewhite;
 }
 
