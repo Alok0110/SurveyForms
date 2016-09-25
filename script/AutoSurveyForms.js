@@ -75,6 +75,59 @@
             
          },
         
+         heading : '<!DOCTYPE html>' +
+                    '<html lang="en">' +
+                    '<head>' +
+                            '<meta charset="utf-8" >' +
+                            '<meta name="viewport" content="width=device-width, initial-scale=1.0" >' +
+                            
+                            '<link type="text/css" rel="stylesheet" href="css/normalize.css" >' +
+                            '<link type="text/css" rel="stylesheet" href="css/grid.css" >' +
+                            
+                            '<link type="text/css" rel="stylesheet" href="css/customcss.css" >' +
+                   '</head>' +
+    
+                   '<body>' +
+    
+                    '<header class="row container-for-head">' +
+
+                        '<nav class="col span-2-of-2">' +
+
+                            '<h2> Survey Form And Template Generator </h2>' +
+
+                        '</nav>' +
+
+                    '</header>' +
+        
+                    '<div class="row" > <div class="col span-2-of-2 holder-col" > <ul> ' ,
+        
+         footer : ' </ul> </div> </div> <footer class="row container-for-footer" >' +
+        
+            '<div class="col span-1-of-3">' +
+                '<p></p>' +
+            '</div>' +
+            
+            '<div class="col span-1-of-3 copyRT">' +
+                '<p>&copy; 2016 SURVEY FORMS - Alok Dethe</p>' +
+            '</div>' +
+            
+            '<div class="col span-1-of-3">' +
+                '<p></p>' +
+            '</div>'+
+        
+        '</footer>' +
+    
+        
+        '<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>' +
+        
+        '<script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script>' +
+        
+        '<script type="text/javascript" src="script/AutoSurveyForms.js" ></script>' +
+        
+       '</body>' +
+    
+       '</html>',
+        
          /* keep recent Add info */
          recentAdd : ""
         
@@ -636,6 +689,8 @@
         
             $( comp ).find("#sor").append(li);
             
+            ( $( li ).children().get(0).childNodes ).item( 1 ).setAttribute( 'id' , 'H' );
+            
             $('.holder-col').css( 'height' , 'auto' );
                 //.append(li);
             //$( comp ).append( $( ui.draggable ).clone() ); 
@@ -781,8 +836,105 @@
         
     }
     
+    g.provideFn.downloadFile = function (data, filename, type) 
+    {
+        
+            var a = document.createElement("a"), file = new Blob([data], {type: type});
+        
+            if ( window.navigator.msSaveOrOpenBlob ) // IE10+
+                {
+                    window.navigator.msSaveOrOpenBlob( file , filename );
+                }
+            else { // Others
+                
+                var url = URL.createObjectURL( file );
+                
+                a.href = url;
+                
+                a.download = filename;
+                
+                document.body.appendChild(a);
+                
+                a.click();
+                
+                setTimeout(function() {
+                    
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url); 
+                    
+                }, 0); 
+            }
+    }
+    
+    g.provideFn.downloadableData = function ( ) 
+    {
+        var heading = g.init.heading;
+        var footer = g.init.footer;
+        
+        var bodySec = $("#sor").html();
+        
+        return heading + '' + bodySec + '' + footer ;
+    }
+    
+    g.provideFn.hideUnhideButtonsBeforeGenerating = function ( o )
+    {
+        var fty = '' , fteen = '' ; 
+        
+        if( o === 'on' ) { fty = '50px'; fteen = '15px'; $('.drag').css( 'display' , 'none' ); }
+        
+        if( o === 'off' ) { fty = '0px'; fteen = '0px'; $('.drag').css( 'display' , 'inline-block' ); }
+        
+         $('#H').css( 'margin-bottom' , fty );
+        
+        var cnt = document.querySelectorAll( 'input[ id^="Q" ]' );
+        
+        $( cnt ).each( function ( index ) {
+            
+            console.log( "show node list " + ( cnt.item( index ) ).getAttribute( 'id' ).length );
+            
+            if( ( cnt.item( index ) ).getAttribute( 'id' ).length === 2 )
+                { 
+                    $( cnt.item( index ) ).css( 'display' , 'block' );
+                    $( cnt.item( index ) ).css( 'margin-top' , fteen );
+                    $( cnt.item( index ) ).css( 'margin-bottom' , fteen );
+                }
+            
+        } );
+        
+        if( o === 'on' )
+            {
+                        var cnto = document.querySelectorAll( 'input[ id^="delete-" ]' );
+
+                        $( cnto ).each( function ( index ) {
+
+                                $( cnto.item( index ) ).css( 'display' , 'none' );
+
+                            } );
+            }
+        
+        if( o === 'off' )
+            {
+                        var cnto = document.querySelectorAll( 'input[ id^="delete-" ]' );
+
+                        $( cnto ).each( function ( index ) {
+
+                                $( cnto.item( index ) ).css( 'display' , 'block' );
+
+                            } );
+            }
+        
+        
+        
+    }
+    
     $('#cTemp').click(function(){
-        alert('Work in progress for this API !');
+        //alert('Work in progress for this API  !');
+        g.provideFn.hideUnhideButtonsBeforeGenerating ( 'on' );
+        
+        g.provideFn.downloadFile ( g.provideFn.downloadableData( ) , 'Template.html' , 'html' );
+        
+        g.provideFn.hideUnhideButtonsBeforeGenerating ( 'off' );
+        
     });
     
     $('#cForm').click(function(){
@@ -795,6 +947,24 @@
     
     $('#cQuest').click(function(){
         //alert("In Save Form!");
+        
+        //$('#H').css( 'margin-bottom' , '50px' );
+        
+        /*var cnt = document.querySelectorAll( 'input[ id^="Q" ]' );
+        
+        $( cnt ).each( function ( index ) {
+            
+            console.log( "show node list " + ( cnt.item( index ) ).getAttribute( 'id' ).length );
+            
+            if( ( cnt.item( index ) ).getAttribute( 'id' ).length === 2 )
+                { 
+                    $( cnt.item( index ) ).css( 'display' , 'block' );
+                    $( cnt.item( index ) ).css( 'margin-top' , '15px' );
+                    $( cnt.item( index ) ).css( 'margin-bottom' , '15px' );
+                }
+            
+        } );*/
+        
         
           if( g.init.trackObj.quest === 'Q' )
               {
