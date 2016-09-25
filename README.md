@@ -78,3 +78,21 @@ Variable : g is Global Object
 Returns:
 Type: Array
 Returns an Array, representing all Auto created Video File id's by form builder.
+
+
+
+g.init.heading
+
+Variable : g is Global Object
+Returns:
+Type: String
+Returns an String of html content of heading section, you can set your own custom heading section here.
+
+
+
+g.init.footer
+
+Variable : g is Global Object
+Returns:
+Type: String
+Returns an String of html content of footer section, you can set your own custom footer section here.
