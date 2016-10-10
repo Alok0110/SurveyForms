@@ -739,7 +739,7 @@
         
         console.log( " This is required array " + optArr );
         
-        if( optArr[ 0 ].length === 0 ) { alert( "Please Remove Extra Comma At Begining" ); return; }
+        if( optArr[ 0 ].length === 0 ) { alert( "Please Enter Values For Option's Or Please Remove Extra Comma At Begining" ); return; }
         
         if( optArr[ optArr.length - 1 ].length === 0 ) { alert( "Please Enter Values For Option's Or Please Remove Extra Comma At End" ); return; }
         
@@ -796,7 +796,7 @@
         
     });
     
-    /* g dir 0210762719 */
+    /* g dir */
     g.com_surveyForms_predefined_DD = function ( o , typeOf ) {
         
         g.init.recentDropDownHandle = o;
