@@ -22,7 +22,7 @@
  */
 
 /*
-* version 1.0
+* version 1.1
 *
 * 
 */
@@ -209,7 +209,7 @@
         
     } );
     
-    
+    /* g dir */
     g.surveryForm_optionsAccessIds = {
     
             /* Get all image id's */
@@ -728,19 +728,96 @@
         
     }
     
+    /* drop down option */
+    g.provideFn.addOpt = function () {
+        
+        console.log(" This is in OK function ! ");
+        
+        var optStr = $('#dd-opt').val();
+        
+        var optArr = optStr.split(',');
+        
+        console.log( " This is required array " + optArr );
+        
+        if( optArr[ 0 ].length === 0 ) { alert( "Please Remove Extra Comma At Begining" ); return; }
+        
+        if( optArr[ optArr.length - 1 ].length === 0 ) { alert( "Please Enter Values For Option's Or Please Remove Extra Comma At End" ); return; }
+        
+        if( g.init.trackObj.opt === 'DD' )
+            {
+                var sel = $( g.init.recentDropDownHandle ).parent().children().get(0);
+                
+                $( sel ).children().remove();
+                
+                $( '#' + g.init.recentDropDownId ).append( '<option id="0">Select</option>' );
+            }
+        
+        optArr.forEach( function( element , index ){
+            
+            console.log( " element " + element +" ==> " + g.init.trackObj.opt + " ---> " + index );
+            
+            if( g.init.trackObj.opt === 'DD' )
+                {
+                    console.log( " Ok ==> " );
+                    $( '#' + g.init.recentDropDownId ).append( '<option id='+( index + 1 )+' >'+element+'</option>' );
+                }
+            
+        
+        } , optArr );
+        
+        g.provideFn.cancelDialog();
+    };
+    
+    g.provideFn.cancelDialog = function () {
+        g.init.dialog.dialog( "close" );
+    }
+    
+    g.provideFn.clearDropDownOptionInput = function () {
+        $( '#dd-opt' ).val("");
+    }
+    
+    /* Dialog for Drop Down */
+    g.init.dialog = $( "#dialog-form" ).dialog({
+        
+      autoOpen: false,
+      height: 400,
+      width: 350,
+      modal: true,
+        
+      buttons: {
+        Ok: g.provideFn.addOpt,
+        Cancel: g.provideFn.cancelDialog
+      },
+        
+      close: function() {
+          g.provideFn.clearDropDownOptionInput();
+          console.log( " close function call ===>  " );
+      }
+        
+    });
+    
+    /* g dir 0210762719 */
     g.com_surveyForms_predefined_DD = function ( o , typeOf ) {
+        
+        g.init.recentDropDownHandle = o;
+        
+        g.init.recentDropDownId = $( g.init.recentDropDownHandle ).parent().children().get(0).getAttribute('id');
         
         if( typeOf === 'DD' )
             {
                 //console.log ( "get len --> " +  ( $( o ).parent() ).children( 'select' ).attr( 'id' ).length );
                 if( ( $( o ).parent() ).children( 'select' ).attr( 'id' ).length !== 0 )
                     {
-                        alert ( 'Version 1.0, Functionality is in Beta Version' );
+                        //alert ( 'Version 1.0, Functionality is in Beta Version' );
+                        /* Dialog open */
+                          g.init.dialog.dialog( "open" );
+
                     }
             }
         
     }
     
+    /* g dir */
     g.com_surveyForms_predefined_del = function ( o , typeOf ) {
         
                     if( typeOf !== 'I' )  ($( o ).parent()).parent().remove();
@@ -937,7 +1014,11 @@
         
     });
     
-    $('#cForm').click(function(){
+    
+    
+    
+    
+    $('#cForm000').click(function(){
         alert(' Version 1.0, Functionality is in Beta Version ');
     });
     
@@ -992,5 +1073,3 @@
     });
     
   }( this ) );
-
-
