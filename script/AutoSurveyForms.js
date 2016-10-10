@@ -1,8 +1,12 @@
 /* 
- *Copyright (C) Joffer Systems, Inc - All Rights Reserved
+ *
+ * Copyright (C) Joffer Systems, Inc - All Rights Reserved
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
  * Written by Alok Dethe <dethealok11@gmail.com>, May 2016
+ *
+ *
+ *
  */
 
 /*
@@ -995,7 +999,7 @@
                     
                         $( cnti ).each( function ( index ) {
                             
-                                $( cnti.item( index ) ).css( 'display' , 'none' );
+                                $( cnti.item( index ) ).css( 'display' , 'block' );
                             
                         } );
             }
