@@ -96,3 +96,5 @@ Variable : g is Global Object
 Returns:
 Type: String
 Returns an String of html content of footer section, you can set your own custom footer section here.
+
+http://tutorials.jenkov.com/java-json/jackson-objectmapper.html#jackson-objectmapper-example
